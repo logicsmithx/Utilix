@@ -32,10 +32,15 @@ try {
     })
     const data = await res.json()
     if(!res.ok){
+        localStorage.removeItem("authToken")
+        localStorage.removeItem("userEmail")
+        localStorage.removeItem("userName")
         setError(data.message || "Something went wrong")
         setSuccess("")
     } else {
-        setSuccess("Login Successful!")
+        localStorage.setItem("userName", data.name || "")
+        localStorage.setItem("userEmail", data.email || formData.email.trim().toLowerCase())
+        localStorage.setItem("authToken", data.token || "")
 setTimeout(() => {
   navigate("/dashboard") }, 2000)
     setFormData({
@@ -43,8 +48,12 @@ setTimeout(() => {
         password: "",
     })
         setError("")
+        setSuccess("Login Successful!")
 }
-} catch (err) {
+} catch {
+    localStorage.removeItem("authToken")
+    localStorage.removeItem("userEmail")
+    localStorage.removeItem("userName")
     setError("Server error. Try again later.")
     setSuccess("")
 }

@@ -4,7 +4,7 @@ return(
 <div>
 <main>
 <section>
-<h1> <mark>Utilix.</mark> A Multi Productivity Tool</h1>
+<h1> <b>Utilix.</b> A Multi Productivity Tool</h1>
 <p>All you require at one place!</p>
 </section>
 <section>
@@ -47,7 +47,7 @@ return(
 </section>
 <section>
 <h3>Get Started</h3>
-<Link to="/login" className="btn">Login</Link>
+<Link to="/signin" className="btn">Sign In</Link>
 <br/>
 <Link to="/signup" className="btn primary">Sign Up</Link>
 </section>

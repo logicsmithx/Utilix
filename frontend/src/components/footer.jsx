@@ -9,10 +9,6 @@ All-in-one productivity tool
 </p>
 </div>
 <div>
-<Link to="/privacypolicy">Privacy Policy</Link>
-<br/>
-<Link to="/termsandconditions">Terms and Conditions</Link>
-<br/>
 <p>
 Copyright © {new Date().getFullYear()} Utilix. All rights reserved.
 </p>
